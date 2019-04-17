@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/local/bin/python3 -u
 
 # Script for checks after deploy
 # Using in TeamCity
@@ -75,9 +75,11 @@ while n < time:
             privateIpv4Address = get_info(response)['tasks'][0]['containers'][0]['networkInterfaces'][0]['privateIpv4Address']
             print("IP " + str(privateIpv4Address))
             image_build_tag = get_image(taskDefinitionArn).split(':')[1]
+            image_build_tag_tc = "%dep.war_Trunk_Build_Server_CgsBuild.env.ARG_TAG%"
             #check tag: no_YMD_HMS (example 298_20190408-154624)
-            if re.match('\d+_\d{8}-\d{6}', image_build_tag) is None:
-                print("Build tag not valid")
+            if image_build_tag != image_build_tag_tc:
+            #if re.match('\d+_\d{8}-\d{6}', image_build_tag) is None:
+                print("Build tag not valid: " + str(image_build_tag))
                 quit(1)
             print("Build tag is OK " + str(image_build_tag))
             #get id ELB
