@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+  name: kubernetes-dashboard-ingress
+  namespace: ingress-nginx
+spec:
+  ports:
+    - port: 443

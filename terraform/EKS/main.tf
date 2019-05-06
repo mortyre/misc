@@ -1,26 +1,8 @@
-resource "aws_iam_role" "war-eks-cluster" {
-  name = "war-eks-cluster"
-
-  assume_role_policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "eks.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-POLICY
-}
-
+### EKS Security Group
 resource "aws_security_group" "war-eks-cluster" {
-  name        = "war-eks-cluster"
+  name        = "${var.cluster-name}"
   description = "Cluster communication with worker nodes"
-  vpc_id      = "${aws_vpc.demo.id}"
+  vpc_id      = "${data.aws_vpc.game_vpc.id}"
 
   egress {
     from_port   = 0
@@ -29,28 +11,27 @@ resource "aws_security_group" "war-eks-cluster" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "terraform-eks-demo"
-  }
+  tags = "${merge(var.tags, map("Name", var.cluster-name))}"
 }
 
-resource "aws_eks_cluster" "war-dev-gameplay" {
+resource "aws_eks_cluster" "war-dev-eks" {
   #  enabled_cluster_log_types = ["api", "audit"]
-  name     = "war-dev-gameplay"
+  name     = "${var.cluster-name}"
   role_arn = "${var.eks_arn}"
 
   vpc_config {
-    #subnet_ids = ["subnet-d74d1af8", "subnet-607c4504"]
+    endpoint_private_access = true
+    endpoint_public_access  = false
+    subnet_ids              = ["${data.aws_subnet_ids.public.ids}", "${data.aws_subnet_ids.private.ids}"]
 
-    subnet_ids = ["${data.aws_subnet_ids.public.ids}"]
-
-    #security_group_ids = 
+    security_group_ids = ["${aws_security_group.war-eks-cluster.id}"]
   }
 }
 
-#output "endpoint" {
-#  value = "${aws_eks_cluster.example.endpoint}"
-#}
+output "endpoint" {
+  value = "${aws_eks_cluster.war-dev-eks.endpoint}"
+}
+
 #
 #output "kubeconfig-certificate-authority-data" {
 #  value = "${aws_eks_cluster.example.certificate_authority.0.data}"
