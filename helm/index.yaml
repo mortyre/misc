@@ -1,0 +1,124 @@
+apiVersion: v1
+entries:
+  prometheus-operator:
+  - apiVersion: v1
+    appVersion: 0.30.1
+    created: "2019-06-27T17:47:17.622347+03:00"
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: 80aca27756ad88aabff47cb5880add331250396ebb55b159e176dcdc1c652877
+    engine: gotpl
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - http://infra-1:8081/charts/prometheus-operator-5.12.5.tgz
+    version: 5.12.5
+  - apiVersion: v1
+    appVersion: 0.30.1
+    created: "2019-06-27T17:47:17.60545+03:00"
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: ab7f44991c55ada0246b11d927fa6b743a8a5a6f6740f97e759771ca7147a397
+    engine: gotpl
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - http://infra-1:8081/charts/prometheus-operator-5.12.0.tgz
+    version: 5.12.0
+  - apiVersion: v1
+    appVersion: 0.30.1
+    created: "2019-06-27T17:47:17.599405+03:00"
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: 01d5c34001a2faa5852b3904754f5dd28ed6e58cb3aebc6b21740c0346ae3426
+    engine: gotpl
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - http://infra-1:8081/charts/prometheus-operator-1.5.12.tgz
+    version: 1.5.12
+  - apiVersion: v1
+    appVersion: 0.30.1
+    created: "2019-06-27T17:47:17.616795+03:00"
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: 609aa33f42adcc2d18dd47635b1ab9907e82fedae17809dee4fb8b79c1bac8b8
+    engine: gotpl
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - http://infra-1:8081/charts/prometheus-operator-5.12.0_2.tgz
+    version: 5.12.0_2
+  - apiVersion: v1
+    appVersion: 0.30.1
+    created: "2019-06-27T17:47:17.611377+03:00"
+    description: Provides easy monitoring definitions for Kubernetes services, and
+      deployment and management of Prometheus instances.
+    digest: 89347de873ccd04e9e9f7d99fa3ce8b8cd4b25773ddedcc4ebd0ea949643baa7
+    engine: gotpl
+    home: https://github.com/coreos/prometheus-operator
+    icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
+    keywords:
+    - operator
+    - prometheus
+    maintainers:
+    - email: gianrubio@gmail.com
+      name: gianrubio
+    - name: anothertobi
+    - name: vsliouniaev
+    name: prometheus-operator
+    sources:
+    - https://github.com/coreos/prometheus-operator
+    - https://coreos.com/operators/prometheus
+    urls:
+    - http://infra-1:8081/charts/prometheus-operator-5.12.0_1.tgz
+    version: 5.12.0_1
+generated: "2019-06-27T17:47:17.591558+03:00"
