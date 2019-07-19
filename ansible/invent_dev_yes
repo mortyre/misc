@@ -1,0 +1,8 @@
+[aio]
+dev1yes-aio-1
+dev1yes-aio-2
+dev2yes-aio-1
+dev2yes-aio-2
+[mongo]
+dev1yes-mongodb-1
+dev2yes-mongodb-1
