@@ -3,14 +3,14 @@
 #set -x
 
 SERVER="https://52FB95AFC0836D6DBF7B7AE49E0B24C6.yl4.eu-central-1.eks.amazonaws.com"
-USER="eks-admin"
+USER="cert-update"
 NS="kube-system"
 NAME="dev"
 
-read -e -p "Input addr server (exp: https://***): " SERVER
-read -e -p "Input user (exp: eks-admin): " USER
-read -e -p "Input Name Space (exp: kube-system): " NS
-read -e -p "Input Cluster Name (exp: war-dev-frankfurt): " NAME
+#read -e -p "Input addr server (exp: https://***): " SERVER
+#read -e -p "Input user (exp: eks-admin): " USER
+#read -e -p "Input Name Space (exp: kube-system): " NS
+#read -e -p "Input Cluster Name (exp: war-dev-frankfurt): " NAME
 
 
 SECRET=$(kubectl -n $NS get secret | grep $USER | awk '{print $1}')
@@ -38,4 +38,4 @@ users:
     client-key-data: $CERT
     token: $TOKEN" > ~/.kube/config_$NAME
 
-ln -s -f ~/.kube/config_$NAME ~/.kube/config
+#ln -s -f ~/.kube/config_$NAME ~/.kube/config
