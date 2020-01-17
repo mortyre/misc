@@ -2,10 +2,11 @@
 meta-loadtestwar-mongodbcfg-use1-3
 meta-loadtestwar-mongodbcfg-use1-2
 meta-loadtestwar-mongodbcfg-use1-1
-[mongodb]
+[mongodba]
 meta-loadtestwar-mongodba-use1-1
 meta-loadtestwar-mongodba-use1-2
 meta-loadtestwar-mongodba-use1-3
+
 meta-loadtestwar-mongodbb-use1-1
 meta-loadtestwar-mongodbb-use1-2
 meta-loadtestwar-mongodbb-use1-3
